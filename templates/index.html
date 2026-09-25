@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google AI Generator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: black;
+            color: white;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🤖 Google AI Generator</h1>
+
+    <p>Enter any topic and let Gemini explain it.</p>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="topic"
+            placeholder="Example: How does Docker work?"
+            required
+        >
+
+        <button type="submit">
+            Generate
+        </button>
+
+    </form>
+
+    {% if result %}
+        <div class="result">
+            {{ result }}
+        </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
